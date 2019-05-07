@@ -1,8 +1,17 @@
 {
-  "name": "textgendataset",
-  "version": "1.0.0",
-  "dependencies": {
-    "easyvk": "^2.4.12",
-    "minimist": "^1.2.0"
-  }
+    "name": "textgendataset",
+    "version": "1.0.0",
+    "license": "Apache License",
+    "homepage": "https://github.com/lulz-tech/dataset-text-generator/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lulz-tech/dataset-text-generator.git"
+    },
+    "dependencies": {
+        "easyvk": "2.4.12",
+        "minimist": "1.2.0"
+    },
+    "devDependencies": {
+        "eslint": "5.16.0"
+    }
 }
