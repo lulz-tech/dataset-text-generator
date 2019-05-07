@@ -1,0 +1,8 @@
+{
+  "name": "textgendataset",
+  "version": "1.0.0",
+  "dependencies": {
+    "easyvk": "^2.4.12",
+    "minimist": "^1.2.0"
+  }
+}
