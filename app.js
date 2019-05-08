@@ -53,7 +53,7 @@ class vkPostsDownloader {
         const wallPostsCount = await this.getWallPostsCount();
         let currentOffset = 0;
         while (currentOffset <= wallPostsCount) {
-            console.info(`Getting ${currentOffset} of ${wallPostsCount} posts`);
+            console.info(`📝 Getting ${currentOffset} of ${wallPostsCount} posts`);
             let posts = (await this.getWallPosts(currentOffset)).map(i => i.text);
             wallPosts.push(...posts);
             currentOffset += 100;
@@ -65,7 +65,10 @@ class vkPostsDownloader {
 
 
 (async function () {
+    console.log("🚦 Launching");
     const grabberInstance = new vkPostsDownloader(argv.login, argv.password, argv.groupId);
     const posts = await grabberInstance.getAllWallPosts();
     fs.writeFileSync(argv.out, 'title\r\n' + posts.join('\r\n'), { encoding: 'utf8' });
+
+    console.log("✨ Dataset was written at:", argv.out);
 })();
