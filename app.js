@@ -54,7 +54,11 @@ class vkPostsDownloader {
         let currentOffset = 0;
         while (currentOffset <= wallPostsCount) {
             console.info(`📝 Getting ${currentOffset} of ${wallPostsCount} posts`);
-            let posts = (await this.getWallPosts(currentOffset)).map(i => i.text);
+            let posts = (await this.getWallPosts(currentOffset)).map(i => {
+                const text = i.text.trim();
+                return text.charAt(0).toUpperCase() + text.slice(1);
+            });
+
             wallPosts.push(...posts);
             currentOffset += 100;
         }
