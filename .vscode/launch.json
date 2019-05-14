@@ -1,19 +1,27 @@
 {
-    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
-    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
-    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "📝 Launch Instance Mode",
             "program": "${workspaceFolder}/app.js",
             "args": [
+                "--mode=instance",
                 "--login=VkLogin",
                 "--password=VkPass",
-                "--groupId=-VkGroupId", 
+                "--groupId=-VkGroupId",
                 "--out=./output/data.txt"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "👩🏽‍💻Launch Server Mode",
+            "program": "${workspaceFolder}/app.js",
+            "args": [
+                "--mode=microservice",
+                "--port=8080"
             ]
         }
     ]

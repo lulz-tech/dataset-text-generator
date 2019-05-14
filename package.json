@@ -9,10 +9,11 @@
     },
     "dependencies": {
         "easyvk": "2.4.12",
-        "express": "^4.16.4",
+        "express": "4.16.4",
         "minimist": "1.2.0"
     },
     "devDependencies": {
-        "eslint": "5.16.0"
+        "eslint": "5.16.0",
+        "eslint-plugin-react": "7.13.0"
     }
 }
