@@ -11,7 +11,12 @@ npm i
 ```
 
 ## Usage
-
+### Instance mode
 ```bash
-node app.js --login=VkLogin --password=VkPass --groupId=-VkGroupId --out=OutputFileName
+node app.js --mode=instance --login=VkLogin --password=VkPass --groupId=-VkGroupId --out=OutputFileName
+```
+### Microservice mode
+```bash
+node app.js --mode=miсroservice --port=port
+Open ip:port/getDataset?login=VKLogin&password=VKPass&groupId=groupId
 ```

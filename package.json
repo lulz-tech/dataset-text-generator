@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "easyvk": "2.4.12",
+        "express": "^4.16.4",
         "minimist": "1.2.0"
     },
     "devDependencies": {
