@@ -13,7 +13,7 @@
                 "--login=VkLogin",
                 "--password=VkPass",
                 "--groupId=-VkGroupId", 
-                "--out=OutputFileName"
+                "--out=./output/data.txt"
             ]
         }
     ]
