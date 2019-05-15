@@ -1,22 +1,23 @@
 const easyvk = require("easyvk");
 
 /**
- * @typedef {Object} WallPost
- * @property {Object} activity - Activity around post
- * @property {Object} activity.likes - Likes of post
- * @property {Number} activity.likes.count - Number of likes
- * @property {String} activity.likes.text - Text of 'likes' line
+ * @typedef  {Object}   WallPost
+ * 
+ * @property {Object}   activity - Activity around post
+ * @property {Object}   activity.likes - Likes of post
+ * @property {Number}   activity.likes.count - Number of likes
+ * @property {String}   activity.likes.text - Text of 'likes' line
  * @property {Number[]} activity.likes.user_ids - First 3 users that liked post
- * @property {String} activity.type - Type of activity
- * @property {Boolean} can_archive - Can current user archive the post
- * @property {Boolean} can_delete - Can current user delete the post
- * @property {Boolean} can_pin - Can current user pin the post
- * @property {Number} date - Timestamp of posting date
- * @property {Number} from_id - Original author of post
- * @property {Number} id - ID of post
- * @property {Boolean} is_archived - Is the post archived
- * @property {Number} owner_id - ID of post owner
- * @property {String} text - Text of post
+ * @property {String}   activity.type - Type of activity
+ * @property {Boolean}  can_archive - Can current user archive the post
+ * @property {Boolean}  can_delete - Can current user delete the post
+ * @property {Boolean}  can_pin - Can current user pin the post
+ * @property {Number}   date - Timestamp of posting date
+ * @property {Number}   from_id - Original author of post
+ * @property {Number}   id - ID of post
+ * @property {Boolean}  is_archived - Is the post archived
+ * @property {Number}   owner_id - ID of post owner
+ * @property {String}   text - Text of post
  *
  */
 class VkPostsDownloader {
@@ -25,9 +26,9 @@ class VkPostsDownloader {
      * @constructor
      * @description Class constructor
      *
-     * @param {String} login - VK username or login
+     * @param {String} login    - VK username or login
      * @param {String} password - VK password
-     * @param {Number} groupId - Number identifier of group (negative number, starts with '-') or user (positive number)
+     * @param {Number} groupId  - Number identifier of group (negative number, starts with '-') or user (positive number)
      * @this VkPostsDownloader
      */
 
@@ -58,6 +59,7 @@ class VkPostsDownloader {
 
     /**
      * @description Get posts count on user's wall
+     * 
      * @returns {Promise<Number>}
      */
     async getWallPostsCount() {
@@ -74,7 +76,9 @@ class VkPostsDownloader {
 
     /**
      * @description Get 100 posts of user or group starting form 'offset'
+     * 
      * @param {Number} offset - offset of posts
+     * 
      * @returns {Promise<WallPost[]>}
      */
     async getWallPosts(offset) {
@@ -90,6 +94,7 @@ class VkPostsDownloader {
 
     /**
      * @description Get all wall posts.
+     * 
      * @returns {Promise<String[]>}
      */
     async getAllWallPosts() {
