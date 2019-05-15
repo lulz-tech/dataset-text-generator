@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 const argv = require("minimist")(process.argv.slice(2));
 
 const launchInstanceMode = require("./src/instance");
@@ -26,7 +28,7 @@ Options:
 --groupId ID of group or user to parse (required if --mode=instance)
 
 Example:
-node app.js --mode=instance --login=+79111111111 --password=1234 --out=dataset.txt
+node app.js --mode=instance --login=+79111111111 --password=1234 --out=dataset.txt --groupId=-1
 node app.js --mode=microservice --port=8080
 `);
     process.exit(0);
